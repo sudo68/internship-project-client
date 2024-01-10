@@ -1,8 +1,12 @@
+// Base URL of our API.
 const BASE_URL = "http://localhost:3000";
+
+// Headers used in each request to our API.
 const HEADERS = new Headers({
 	"Content-Type": "application/json",
 });
 
+// Request function for fetching All Products.
 export async function getAllProduct() {
 	const response = await fetch(`${BASE_URL}/products`, {
 		method: "GET",
@@ -11,6 +15,7 @@ export async function getAllProduct() {
 	return response.json();
 }
 
+// Request function for fetching Single Product.
 export async function singleProduct(productId) {
 	const response = await fetch(`${BASE_URL}/products/${productId}`, {
 		method: "GET",
@@ -19,6 +24,7 @@ export async function singleProduct(productId) {
 	return await response.json();
 }
 
+// Request function for creating a Product.
 export async function createProduct() {
 	const response = await fetch(`${BASE_URL}/products`, {
 		method: "POST",
@@ -28,6 +34,7 @@ export async function createProduct() {
 	return response.ok;
 }
 
+// Request function for updating a Product.
 export async function updateProduct(productId) {
 	const response = await fetch(`${BASE_URL}/products/${productId}`, {
 		method: "PUT",
@@ -37,6 +44,7 @@ export async function updateProduct(productId) {
 	return response.ok;
 }
 
+// Request function for deleting a Product.
 export async function deleteProduct(productId) {
 	const response = await fetch(`${BASE_URL}/products/${productId}`, {
 		method: "DELETE",
