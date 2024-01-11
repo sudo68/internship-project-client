@@ -25,7 +25,7 @@ export async function singleProduct(productId) {
 }
 
 // Request function for creating a Product.
-export async function createProduct() {
+export async function createProduct(data) {
 	const response = await fetch(`${BASE_URL}/products`, {
 		method: "POST",
 		headers: HEADERS,
@@ -35,11 +35,11 @@ export async function createProduct() {
 }
 
 // Request function for updating a Product.
-export async function updateProduct(productId) {
+export async function updateProduct(productId, data) {
 	const response = await fetch(`${BASE_URL}/products/${productId}`, {
 		method: "PUT",
 		headers: HEADERS,
-		body: data,
+		body: JSON.stringify(data),
 	});
 	return response.ok;
 }

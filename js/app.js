@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 		const productPrice = document.createElement("p");
 		productPrice.textContent = `Rs. ${product.price}`;
 
+		const editLink = document.createElement("a");
+		editLink.textContent = "Edit";
+		editLink.href = `./edit-product.html?id=${product.id}`;
+
 		const productDetails = document.createElement("a");
 		productDetails.href = `./single-product.html?id=${product.id}`;
 		productDetails.textContent = "View Details";
@@ -29,6 +33,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 		container.appendChild(productImage);
 		container.appendChild(productName);
 		container.appendChild(productPrice);
+		container.appendChild(editLink);
+		container.appendChild(newLine);
 		container.appendChild(productDetails);
 		displayArea.appendChild(container);
 	});

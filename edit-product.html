@@ -6,8 +6,32 @@
 		<title>Edit Product</title>
 	</head>
 	<body>
+		<form method="PUT">
+			<label for="productId">Product ID</label>
+			<input type="text" id="productId" name="productId" />
+			<br />
+
+			<label for="productName">Product Name</label>
+			<input type="text" id="productName" name="productName" />
+			<br />
+
+			<label for="productImage">Product Image</label>
+			<input type="text" id="productImage" name="productImage" />
+			<br />
+
+			<label for="productPrice">Product Price</label>
+			<input type="text" id="productPrice" name="productPrice" />
+			<br />
+
+			<label for="productDesc">Product Description</label>
+			<input type="text" id="productDesc" name="productDesc" />
+			<br />
+
+			<button type="submit" id="editProduct">submit</button>
+		</form>
+		<a href="./index.html">Go Home</a>
 		<!-- The following line includes editProduct.js file for making request.
 			Type module is required as we are importing a function. -->
-		<script src="./js/editProduct.js"></script>
+		<script src="./js/editProduct.js" type="module"></script>
 	</body>
 </html>
